@@ -185,8 +185,15 @@ nav {
 }
 
 .icon {
-    font-size: 42px;
-    margin-bottom: 15px;
+    display: inline-block;
+    padding: 8px 14px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .card h3 {
