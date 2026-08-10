@@ -734,41 +734,28 @@ footer {
 
 }
 /* =========================================
-   URDU FONT + MOBILE RESPONSIVE FIX
+   CLEAN URDU FONT
    ========================================= */
 
-/* Urdu text */
-.ur {
-    font-family:
-        "Nafees Web Naskh",
-        "Nafees Web Naskh",
-        "Jameel Noori Nastaleeq",
-        "Segoe UI",
-        Tahoma,
-        Arial,
-        sans-serif;
-
-    line-height: 2;
-    letter-spacing: 0;
-}
-
-/* Urdu headings */
+.ur,
 .ur h1,
 .ur h2,
 .ur h3,
-.ur p {
-    font-family:
-        "Nafees Web Naskh",
-        "Nafees Web Naskh",
-        "Jameel Noori Nastaleeq",
-        "Segoe UI",
-        Tahoma,
-        Arial,
-        sans-serif;
+.ur p,
+.ur a,
+.ur button {
+    font-family: "Noto Naskh Arabic", "Segoe UI", Tahoma, Arial, sans-serif;
+    letter-spacing: 0;
 }
 
+/* Main Urdu text */
+.ur {
+    line-height: 2;
+}
+
+/* Urdu headings */
 .ur h1 {
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 .ur h2 {
@@ -776,38 +763,11 @@ footer {
 }
 
 .ur h3 {
-    line-height: 2;
+    line-height: 1.9;
 }
 
 .ur p {
-    line-height: 2.1;
-}
-
-
-/* =========================================
-   URDU NAVIGATION
-   ========================================= */
-
-.nav-links .ur {
-    line-height: 1.8;
-    white-space: nowrap;
-}
-
-
-/* =========================================
-   URDU CARDS
-   ========================================= */
-
-.card .ur {
-    padding: 2px 4px;
-}
-
-.card .ur h3 {
-    margin-bottom: 12px;
-}
-
-.card .ur p {
-    margin-bottom: 5px;
+    line-height: 2;
 }
 
 
@@ -822,89 +782,59 @@ footer {
     }
 
     .hero .ur {
-        padding: 0 10px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     .hero .ur h1 {
-        font-size: 34px;
+        font-size: 32px;
         line-height: 1.8;
-        margin: 15px 0 12px;
+        margin: 12px 0 15px;
     }
 
     .hero .ur p {
         font-size: 17px;
         line-height: 2.1;
-        margin: 8px 0;
     }
 
-    .hero .ur .btn {
-        margin-top: 20px;
-    }
-
-
-    /* Urdu navigation */
-    .nav-links .ur {
-        padding: 11px 20px;
-        line-height: 1.9;
-    }
-
-
-    /* Urdu section headings */
-    .section > .ur {
-        padding: 0 8px;
-        margin-bottom: 35px;
-        line-height: 1.8;
-    }
-
-
-    /* Urdu cards */
     .card .ur {
-        padding: 4px 8px;
+        padding: 0 6px;
     }
 
     .card .ur h3 {
         font-size: 21px;
-        line-height: 2;
+        line-height: 1.9;
         margin-bottom: 10px;
     }
 
     .card .ur p {
         font-size: 16px;
-        line-height: 2.15;
+        line-height: 2.1;
     }
 
-
-    /* Urdu pricing */
     .region-title .ur {
+        padding: 0 8px;
         line-height: 1.9;
-        padding: 0 5px;
     }
 
-
-    /* Urdu contact */
     .contact .ur {
-        padding: 0 10px;
+        padding: 0 12px;
     }
 
     .contact .ur h2 {
-        line-height: 1.9;
+        line-height: 1.8;
     }
 
     .contact .ur p {
-        font-size: 17px;
         line-height: 2.1;
     }
 }
 
 
-/* =========================================
-   SMALL PHONES
-   ========================================= */
-
 @media (max-width: 480px) {
 
     .hero .ur h1 {
-        font-size: 29px;
+        font-size: 28px;
         line-height: 1.85;
     }
 
@@ -916,7 +846,6 @@ footer {
     .section > .ur {
         font-size: 28px;
         line-height: 1.9;
-        margin-bottom: 30px;
     }
 
     .card .ur h3 {
@@ -928,16 +857,12 @@ footer {
         line-height: 2.2;
     }
 
-    .region-title {
-        padding: 0 12px;
-    }
-
     .region-title .ur {
         font-size: 20px;
     }
 
     .contact .ur h2 {
-        font-size: 29px;
+        font-size: 28px;
     }
 
     .contact .ur p {
