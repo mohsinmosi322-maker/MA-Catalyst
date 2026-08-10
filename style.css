@@ -956,3 +956,14 @@ section {
 .btn:active {
     transform: translateY(0) scale(0.97);
 }
+/* ================= SMOOTH SCROLL ================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+/* Sections ko navbar ke neeche proper position par rokna */
+section {
+    scroll-margin-top: 90px;
+}
