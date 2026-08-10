@@ -128,85 +128,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    /* ================= SMOOTH SCROLL ================= */
+  /* ================= SMOOTH SCROLL ================= */
 
-    var scrollLinks =
-        document.querySelectorAll('a[href^="#"]');
+var scrollLinks = document.querySelectorAll('a[href^="#"]');
 
+for (var s = 0; s < scrollLinks.length; s++) {
 
-    for (var s = 0; s < scrollLinks.length; s++) {
+    scrollLinks[s].addEventListener("click", function (event) {
 
-        scrollLinks[s].addEventListener(
-            "click",
-            function (event) {
+        var targetId = this.getAttribute("href");
 
-                var targetId =
-                    this.getAttribute("href");
+        if (!targetId || targetId === "#") {
+            return;
+        }
 
+        var target = document.querySelector(targetId);
 
-                if (
-                    !targetId ||
-                    targetId === "#"
-                ) {
-                    return;
-                }
+        if (!target) {
+            return;
+        }
 
+        event.preventDefault();
 
-                var target =
-                    document.querySelector(targetId);
+        /* Close mobile menu */
+        if (navLinks) {
+            navLinks.classList.remove("mobile-open");
+        }
 
+        /* Let browser perform native smooth scrolling */
+        target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
 
-                if (!target) {
-                    return;
-                }
-
-
-                event.preventDefault();
-
-
-                /* Close mobile menu */
-
-                if (navLinks) {
-                    navLinks.classList.remove(
-                        "mobile-open"
-                    );
-                }
-
-
-                /* Header height */
-
-                var header =
-                    document.querySelector(".navbar");
-
-
-                var headerHeight =
-                    header
-                        ? header.offsetHeight
-                        : 0;
-
-
-                /* Target position */
-
-                var targetPosition =
-                    target.getBoundingClientRect().top +
-                    window.pageYOffset -
-                    headerHeight -
-                    10;
-
-
-                /* Smooth animation */
-
-                window.scrollTo({
-
-                    top: targetPosition,
-
-                    behavior: "smooth"
-
-                });
-
-            }
-        );
-
-    }
-
+    });
+}
 });
