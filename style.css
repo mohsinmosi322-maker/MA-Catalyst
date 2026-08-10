@@ -876,3 +876,49 @@ footer {
         line-height: 2.2;
     }
 }
+/* =========================================
+   FINAL LANGUAGE VISIBILITY FIX
+   ========================================= */
+
+.ur {
+    display: none !important;
+}
+
+html[lang="ur"] .en {
+    display: none !important;
+}
+
+html[lang="ur"] .ur {
+    display: block !important;
+}
+
+html[lang="en"] .en {
+    display: block !important;
+}
+
+html[lang="en"] .ur {
+    display: none !important;
+}
+
+
+/* Mobile navigation */
+
+@media (max-width: 850px) {
+
+    html[lang="en"] .nav-links .en {
+        display: block !important;
+    }
+
+    html[lang="en"] .nav-links .ur {
+        display: none !important;
+    }
+
+    html[lang="ur"] .nav-links .en {
+        display: none !important;
+    }
+
+    html[lang="ur"] .nav-links .ur {
+        display: block !important;
+    }
+
+}
