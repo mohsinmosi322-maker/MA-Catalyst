@@ -5,54 +5,27 @@ document.addEventListener("DOMContentLoaded", function () {
     var languageBtn = document.getElementById("languageBtn");
     var isUrdu = false;
 
-    function setLanguage(urduMode) {
+   function setLanguage(urduMode) {
 
-        isUrdu = urduMode;
+    isUrdu = urduMode;
 
-        var englishItems = document.querySelectorAll(".en");
-        var urduItems = document.querySelectorAll(".ur");
+    if (urduMode) {
 
-        if (isUrdu) {
+        document.documentElement.lang = "ur";
 
-            /* Hide English */
-            for (var i = 0; i < englishItems.length; i++) {
-                englishItems[i].style.display = "none";
-            }
+        if (languageBtn) {
+            languageBtn.textContent = "English";
+        }
 
-            /* IMPORTANT:
-               CSS has .ur { display:none }
-               so Urdu MUST be explicitly shown.
-            */
-            for (var j = 0; j < urduItems.length; j++) {
-                urduItems[j].style.display = "block";
-            }
+    } else {
 
-            document.documentElement.lang = "ur";
+        document.documentElement.lang = "en";
 
-            if (languageBtn) {
-                languageBtn.textContent = "English";
-            }
-
-        } else {
-
-            /* Show English */
-            for (var i = 0; i < englishItems.length; i++) {
-                englishItems[i].style.display = "block";
-            }
-
-            /* Hide Urdu */
-            for (var j = 0; j < urduItems.length; j++) {
-                urduItems[j].style.display = "none";
-            }
-
-            document.documentElement.lang = "en";
-
-            if (languageBtn) {
-                languageBtn.textContent = "اردو";
-            }
+        if (languageBtn) {
+            languageBtn.textContent = "اردو";
         }
     }
-
+}
 
     if (languageBtn) {
 
