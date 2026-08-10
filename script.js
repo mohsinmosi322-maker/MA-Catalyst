@@ -190,7 +190,7 @@ $(document).ready(function () {
 
         $('html, body').animate({
             scrollTop: element.offset().top - 80
-        }, 800);
+        }, 1200);
 
     });
 
