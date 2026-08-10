@@ -1,28 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ================= LANGUAGE ================= */
+    /* ================= LANGUAGE TOGGLE ================= */
 
     var languageBtn = document.getElementById("languageBtn");
-
     var isUrdu = false;
 
+    function setLanguage(urduMode) {
 
-    function setLanguage(urdu) {
+        isUrdu = urduMode;
 
-        isUrdu = urdu;
-
-        var english = document.querySelectorAll(".en");
-        var urdu = document.querySelectorAll(".ur");
-
+        var englishItems = document.querySelectorAll(".en");
+        var urduItems = document.querySelectorAll(".ur");
 
         if (isUrdu) {
 
-            for (var i = 0; i < english.length; i++) {
-                english[i].style.display = "none";
+            /* English hide */
+            for (var i = 0; i < englishItems.length; i++) {
+                englishItems[i].style.display = "none";
             }
 
-            for (var j = 0; j < urdu.length; j++) {
-                urdu[j].style.display = "";
+            /* Urdu show */
+            for (var j = 0; j < urduItems.length; j++) {
+                urduItems[j].style.display = "";
             }
 
             document.documentElement.lang = "ur";
@@ -33,12 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } else {
 
-            for (var i = 0; i < english.length; i++) {
-                english[i].style.display = "";
+            /* English show */
+            for (var i = 0; i < englishItems.length; i++) {
+                englishItems[i].style.display = "";
             }
 
-            for (var j = 0; j < urdu.length; j++) {
-                urdu[j].style.display = "none";
+            /* Urdu hide */
+            for (var j = 0; j < urduItems.length; j++) {
+                urduItems[j].style.display = "none";
             }
 
             document.documentElement.lang = "en";
@@ -49,10 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-
     if (languageBtn) {
 
-        languageBtn.addEventListener("click", function () {
+        languageBtn.addEventListener("click", function (event) {
+
+            event.preventDefault();
+            event.stopPropagation();
 
             setLanguage(!isUrdu);
 
@@ -60,29 +63,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
-    /* English is default */
-
+    /* Default English */
     setLanguage(false);
 
 
 
     /* ================= MOBILE MENU ================= */
 
-    var menuToggle =
-        document.getElementById("menuToggle");
-
-    var navLinks =
-        document.getElementById("navLinks");
-
+    var menuToggle = document.getElementById("menuToggle");
+    var navLinks = document.getElementById("navLinks");
 
     if (menuToggle && navLinks) {
 
-
-        /* Open / close menu */
+        /* Hamburger open / close */
 
         menuToggle.addEventListener("click", function (event) {
 
+            event.preventDefault();
             event.stopPropagation();
 
             navLinks.classList.toggle("mobile-open");
@@ -90,16 +87,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        /* Close menu after clicking a link */
+        /* ================= MENU ITEMS ================= */
 
-        var navItems =
-            navLinks.querySelectorAll("a");
-
+        var navItems = navLinks.querySelectorAll("a");
 
         for (var k = 0; k < navItems.length; k++) {
 
             navItems[k].addEventListener("click", function () {
 
+                /* Immediately close hamburger */
                 navLinks.classList.remove("mobile-open");
 
             });
@@ -107,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        /* Close menu when clicking outside */
+        /* ================= OUTSIDE CLICK ================= */
 
         document.addEventListener("click", function (event) {
 
@@ -123,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        /* Close menu with Escape */
+        /* ================= ESC KEY ================= */
 
         document.addEventListener("keydown", function (event) {
 
@@ -136,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        /* Close menu when returning to desktop */
+        /* ================= DESKTOP ================= */
 
         window.addEventListener("resize", function () {
 
