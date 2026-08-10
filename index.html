@@ -1,287 +1,939 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MA Catalyst | SQL & Data Services</title>
+    <meta name="description"
+        content="MA Catalyst provides pharmacy, Excel, SQL, inventory, sales and business data solutions.">
+
+    <meta name="theme-color" content="#0f172a">
+
+    <title>MA Catalyst | Pharmacy & Business Data Solutions</title>
+
+    <!-- Built-in SVG favicon - no separate file required -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M9 48V16h8l15 17 15-17h8v32h-8V28L32 45 17 28v20z' fill='%2338bdf8'/%3E%3Ccircle cx='50' cy='14' r='6' fill='%230284c7'/%3E%3C/svg%3E">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">MA Catalyst</div>
+<!-- ================= HEADER ================= -->
 
-        <div class="nav-links">
-            <a href="#services">Services</a>
-            <a href="#work">My Work</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
+<header>
+
+    <nav>
+
+        <a href="#home" class="logo">
+            MA Catalyst
+        </a>
+    
+        <button class="menu-toggle" id="menuToggle" type="button"
+            aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    
+        <div class="nav-links" id="navLinks">
+    
+            <a href="#home" class="en">Home</a>
+            <a href="#services" class="en">Services</a>
+            <a href="#portfolio" class="en">Portfolio</a>
+            <a href="#pricing" class="en">Pricing</a>
+            <a href="#contact" class="en">Contact</a>
+    
+            <a href="#home" class="ur" dir="rtl">ہوم</a>
+            <a href="#services" class="ur" dir="rtl">سروسز</a>
+            <a href="#portfolio" class="ur" dir="rtl">نمونہ کام</a>
+            <a href="#pricing" class="ur" dir="rtl">قیمت</a>
+            <a href="#contact" class="ur" dir="rtl">رابطہ</a>
+    
+            <button id="languageBtn" type="button">
+                اردو
+            </button>
+    
         </div>
+    
     </nav>
 
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
 
-        <div class="hero-content">
+<!-- ================= HERO ================= -->
 
-            <p class="small-title">SQL • DATA • EXCEL</p>
+<section id="home" class="hero">
 
-            <h1>
-                Turn Your Data Into
-                <span>Useful Reports</span>
-            </h1>
+    <div class="hero-content">
 
-            <p class="hero-text">
-                I help small businesses organize data and create
-                useful SQL, Excel and business reports.
+        <div class="en">
+
+            <div class="hero-icon">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <rect x="9" y="34" width="9" height="20" rx="2"></rect>
+                    <rect x="27" y="24" width="9" height="30" rx="2"></rect>
+                    <rect x="45" y="12" width="9" height="42" rx="2"></rect>
+                    <polyline points="7,28 27,17 45,8"></polyline>
+                </svg>
+            </div>
+
+            <p class="tag">
+                PHARMACY • DATA • BUSINESS
             </p>
 
-            <div class="buttons">
-                <a href="#contact" class="btn primary">
-                    Get a Free Sample
-                </a>
+            <h1>
+                Pharmacy &amp; Business
+                <br>
+                Data Solutions
+            </h1>
 
-                <a href="#services" class="btn secondary">
-                    View Services
-                </a>
+            <p>
+                Transform your sales, purchase and inventory data
+                into smart business reports.
+            </p>
+
+            <a href="#contact" class="btn">
+                Get Free Demo
+            </a>
+
+        </div>
+
+
+        <div class="ur" dir="rtl">
+
+            <div class="hero-icon">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <rect x="9" y="34" width="9" height="20" rx="2"></rect>
+                    <rect x="27" y="24" width="9" height="30" rx="2"></rect>
+                    <rect x="45" y="12" width="9" height="42"></rect>
+                    <polyline points="7,28 27,17 45,8"></polyline>
+                </svg>
+            </div>
+
+            <p class="tag">
+                فارمیسی • ڈیٹا • بزنس
+            </p>
+
+            <h1>
+                فارمیسی اور بزنس
+                <br>
+                ڈیٹا سلوشنز
+            </h1>
+
+            <p>
+                اپنے سیلز، خریداری اور اسٹاک ڈیٹا کو
+                <br>
+                آسان اور مفید رپورٹس میں تبدیل کریں۔
+            </p>
+
+            <a href="#contact" class="btn">
+                مفت ڈیمو حاصل کریں
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services" class="section">
+
+    <h2 class="en">Our Services</h2>
+
+    <h2 class="ur" dir="rtl">ہماری سروسز</h2>
+
+
+    <div class="cards">
+
+
+        <!-- Pharmacy -->
+
+        <div class="card">
+
+            <div class="service-icon">
+
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <rect x="10" y="34" width="9" height="20" rx="2"></rect>
+                    <rect x="27" y="24" width="9" height="30" rx="2"></rect>
+                    <rect x="44" y="12" width="9" height="42" rx="2"></rect>
+                    <polyline points="8,29 27,18 44,8"></polyline>
+                </svg>
+
+            </div>
+
+
+            <div class="en">
+
+                <h3>Pharmacy Reports</h3>
+
+                <p>
+                    ✓ Sales Reports<br>
+                    ✓ Stock Reports<br>
+                    ✓ Expiry Tracking<br>
+                    ✓ Purchase Analysis<br>
+                    ✓ Medicine Analysis
+                </p>
+
+            </div>
+
+
+            <div class="ur" dir="rtl">
+
+                <h3>فارمیسی رپورٹس</h3>
+
+                <p>
+                    ✓ سیلز رپورٹس<br>
+                    ✓ اسٹاک رپورٹس<br>
+                    ✓ ایکسپائری چیکنگ<br>
+                    ✓ خریداری کا تجزیہ<br>
+                    ✓ ادویات کا تجزیہ
+                </p>
+
             </div>
 
         </div>
 
-    </section>
 
+        <!-- Database -->
 
-    <!-- Services -->
-    <section id="services" class="section">
+        <div class="card">
 
-        <h2>What I Can Do</h2>
+            <div class="service-icon">
 
-        <p class="section-intro">
-            Simple and affordable data solutions for small businesses.
-        </p>
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <ellipse cx="32" cy="15" rx="20" ry="8"></ellipse>
+                    <path d="M12 15v17c0 5 9 8 20 8s20-3 20-8V15"></path>
+                    <path d="M12 32v17c0 5 9 8 20 8s20-3 20-8V32"></path>
+                </svg>
 
-
-        <div class="services">
-
-            <div class="card">
-                <div class="icon">SQL</div>
-
-                <h3>SQL Reports</h3>
-
-                <p>
-                    Sales, purchases, stock, customer and
-                    product reports using SQL.
-                </p>
             </div>
 
 
-            <div class="card">
-                <div class="icon">DATA</div>
+            <div class="en">
 
-                <h3>Data Entry</h3>
+                <h3>Database Solutions</h3>
 
                 <p>
-                    Accurate data entry, organization and
-                    basic data cleanup.
+                    ✓ SQL Reports<br>
+                    ✓ Data Cleaning<br>
+                    ✓ Custom Queries<br>
+                    ✓ Database Support<br>
+                    ✓ Data Analysis
                 </p>
+
             </div>
 
 
-            <div class="card">
-                <div class="icon">EXCEL</div>
+            <div class="ur" dir="rtl">
 
-                <h3>Excel Reports</h3>
+                <h3>ڈیٹا بیس سلوشنز</h3>
 
                 <p>
-                    Clean spreadsheets, calculations,
-                    summaries and simple business reports.
+                    ✓ SQL رپورٹس<br>
+                    ✓ ڈیٹا صفائی<br>
+                    ✓ کسٹم کوئریز<br>
+                    ✓ ڈیٹا بیس سپورٹ<br>
+                    ✓ ڈیٹا کا تجزیہ
                 </p>
+
             </div>
 
         </div>
 
-    </section>
 
+        <!-- Automation -->
 
-    <!-- Work -->
-    <section id="work" class="section work-section">
+        <div class="card">
 
-        <h2>Sample Work</h2>
+            <div class="service-icon">
 
-       <p class="section-intro">
-    Not sure what you need?
-    Send a small sample of your data and I'll suggest a solution.
-</p>
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <polyline points="9,45 22,32 32,39 53,17"></polyline>
+                    <polyline points="43,17 53,17 53,27"></polyline>
+                    <line x1="10" y1="53" x2="54" y2="53"></line>
+                </svg>
 
-
-        <div class="work-grid">
-
-            <div class="work-card">
-                <h3>Sales Report</h3>
-        
-                <p>
-                    Product-wise sales analysis using SQL JOIN,
-                    GROUP BY and aggregate functions.
-                </p>
-        
-                <div class="report-preview">
-                    <div>Product: Panadol 500mg</div>
-                    <div>Quantity Sold: 22</div>
-                    <div>Total Sales: $2,640</div>
-                </div>
             </div>
-        
-        
-            <div class="work-card">
-                <h3>Purchase & Inventory</h3>
-        
+
+
+            <div class="en">
+
+                <h3>Business Automation</h3>
+
                 <p>
-                    Business data can be organized into clear
-                    purchase and inventory reports.
+                    ✓ Excel Automation<br>
+                    ✓ Data Management<br>
+                    ✓ Business Tools<br>
+                    ✓ Report Automation<br>
+                    ✓ Workflow Improvement
                 </p>
-        
-                <div class="report-preview">
-                    <div>Products: 5</div>
-                    <div>Categories: 2</div>
-                    <div>Inventory Report: Ready</div>
-                </div>
+
             </div>
-        
-        
-            <div class="work-card">
-                <h3>Custom SQL Query</h3>
-        
+
+
+            <div class="ur" dir="rtl">
+
+                <h3>بزنس آٹومیشن</h3>
+
                 <p>
-                    Custom SQL queries based on the client's
-                    business requirements.
+                    ✓ ایکسل آٹومیشن<br>
+                    ✓ ڈیٹا مینجمنٹ<br>
+                    ✓ بزنس ٹولز<br>
+                    ✓ رپورٹ آٹومیشن<br>
+                    ✓ کام کے طریقہ کار میں بہتری
                 </p>
-        
-                <div class="report-preview">
-                    <div>JOIN: ✓</div>
-                    <div>GROUP BY: ✓</div>
-                    <div>ORDER BY: ✓</div>
-                </div>
+
             </div>
-        
+
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- Pricing -->
-    <section id="pricing" class="section">
+<!-- ================= PORTFOLIO ================= -->
 
-        <h2>Simple Pricing</h2>
+<section id="portfolio" class="section dark">
 
-        <p class="section-intro">
-            Start small. Pay only for what you need.
-        </p>
+    <h2 class="en">Sample Work</h2>
+
+    <h2 class="ur" dir="rtl">نمونہ کام</h2>
 
 
-        <div class="pricing">
+    <div class="cards">
 
-            <div class="price-card">
+
+        <!-- Sales -->
+
+        <div class="card">
+
+            <div class="portfolio-icon">
+
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <line x1="10" y1="54" x2="54" y2="54"></line>
+                    <rect x="12" y="35" width="8" height="19"></rect>
+                    <rect x="28" y="25" width="8" height="29"></rect>
+                    <rect x="44" y="14" width="8" height="40"></rect>
+                </svg>
+
+            </div>
+
+
+            <div class="en">
+
+                <h3>Sales Dashboard</h3>
+
+                <p>
+                    Total Sales:
+                    <strong>Rs. 485,000</strong>
+                </p>
+
+                <p>
+                    Top Product:
+                    <strong>Panadol</strong>
+                </p>
+
+                <p>
+                    Monthly Sales Analysis
+                </p>
+
+            </div>
+
+
+            <div class="ur" dir="rtl">
+
+                <h3>سیلز ڈیش بورڈ</h3>
+
+                <p>
+                    کل سیلز:
+                    <strong>485,000 روپے</strong>
+                </p>
+
+                <p>
+                    سب سے زیادہ فروخت:
+                    <strong>پیناڈول</strong>
+                </p>
+
+                <p>
+                    ماہانہ سیلز کا تجزیہ
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Inventory -->
+
+        <div class="card">
+
+            <div class="portfolio-icon">
+
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <path d="M10 20l22-10 22 10-22 10z"></path>
+                    <path d="M10 20v25l22 10 22-10V20"></path>
+                    <path d="M32 30v25"></path>
+                </svg>
+
+            </div>
+
+
+            <div class="en">
+
+                <h3>Inventory Report</h3>
+
+                <p>
+                    Low Stock Items:
+                    <strong>12</strong>
+                </p>
+
+                <p>
+                    Expiry Alerts:
+                    <strong>5</strong>
+                </p>
+
+                <p>
+                    Current Inventory Overview
+                </p>
+
+            </div>
+
+
+            <div class="ur" dir="rtl">
+
+                <h3>اسٹاک رپورٹ</h3>
+
+                <p>
+                    کم اسٹاک آئٹمز:
+                    <strong>12</strong>
+                </p>
+
+                <p>
+                    ایکسپائری الرٹس:
+                    <strong>5</strong>
+                </p>
+
+                <p>
+                    موجودہ اسٹاک کا جائزہ
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Purchase -->
+
+        <div class="card">
+
+            <div class="portfolio-icon">
+
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <rect x="10" y="15" width="44" height="38" rx="4"></rect>
+                    <line x1="10" y1="27" x2="54" y2="27"></line>
+                    <line x1="22" y1="36" x2="22" y2="46"></line>
+                    <line x1="32" y1="36" x2="32" y2="46"></line>
+                    <line x1="42" y1="36" x2="42" y2="46"></line>
+                </svg>
+
+            </div>
+
+
+            <div class="en">
+
+                <h3>Purchase Analysis</h3>
+
+                <p>
+                    Supplier Reports
+                </p>
+
+                <p>
+                    Monthly Purchase Summary
+                </p>
+
+                <p>
+                    Purchase Trend Analysis
+                </p>
+
+            </div>
+
+
+            <div class="ur" dir="rtl">
+
+                <h3>خریداری کا تجزیہ</h3>
+
+                <p>
+                    سپلائر رپورٹس
+                </p>
+
+                <p>
+                    ماہانہ خریداری کا خلاصہ
+                </p>
+
+                <p>
+                    خریداری کے رجحان کا تجزیہ
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRICING ================= -->
+
+<section id="pricing" class="section">
+
+    <h2 class="en">Pricing</h2>
+
+    <h2 class="ur" dir="rtl">قیمت</h2>
+
+
+    <!-- Pakistan -->
+
+    <div class="region-title">
+
+        <span class="region-icon">
+
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M32 8l5 12 13 1-10 8 3 13-11-7-11 7 3-13-10-8 13-1z"></path>
+                <path d="M10 51h44"></path>
+            </svg>
+
+        </span>
+
+        <span class="en">
+            Pakistan Clients
+        </span>
+
+        <span class="ur" dir="rtl">
+            پاکستان کے کلائنٹس
+        </span>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="price-icon">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <circle cx="32" cy="32" r="23"></circle>
+                    <path d="M32 18v28"></path>
+                    <path d="M40 24c-2-4-14-5-16 2-2 7 16 4 16 11 0 7-14 8-17 1"></path>
+                </svg>
+            </div>
+
+
+            <div class="en">
+
+                <h3>Basic Report</h3>
+
+                <h2>Rs. 2,500</h2>
+
+                <p>
+                    1 Business Report<br>
+                    Excel Cleanup<br>
+                    Basic Analysis<br>
+                    Free Initial Review
+                </p>
+
+            </div>
+
+
+            <div class="ur" dir="rtl">
+
+                <h3>بیسک رپورٹ</h3>
+
+                <h2>2,500 روپے</h2>
+
+                <p>
+                    ایک بزنس رپورٹ<br>
+                    ایکسل ڈیٹا صفائی<br>
+                    بنیادی تجزیہ<br>
+                    مفت ابتدائی جائزہ
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="price-icon">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <rect x="10" y="15" width="44" height="34" rx="5"></rect>
+                    <line x1="18" y1="27" x2="46" y2="27"></line>
+                    <line x1="18" y1="36" x2="36" y2="36"></line>
+                </svg>
+            </div>
+
+
+            <div class="en">
+
+                <h3>Business Package</h3>
+
+                <h2>Rs. 7,500</h2>
+
+                <p>
+                    Multiple Reports<br>
+                    SQL Queries<br>
+                    Inventory Analysis<br>
+                    Data Cleanup
+                </p>
+
+            </div>
+
+
+            <div class="ur" dir="rtl">
+
+                <h3>بزنس پیکج</h3>
+
+                <h2>7,500 روپے</h2>
+
+                <p>
+                    متعدد رپورٹس<br>
+                    SQL کوئریز<br>
+                    اسٹاک تجزیہ<br>
+                    ڈیٹا صفائی
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="price-icon">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <path d="M32 8l6 17h18L41 35l6 18-15-11-15 11 6-18L8 25h18z"></path>
+                </svg>
+            </div>
+
+
+            <div class="en">
+
+                <h3>Custom Solution</h3>
+
+                <h2>Rs. 15,000+</h2>
+
+                <p>
+                    Database Work<br>
+                    Automation<br>
+                    Custom Tools<br>
+                    Business Solutions
+                </p>
+
+            </div>
+
+
+            <div class="ur" dir="rtl">
+
+                <h3>کسٹم سلوشن</h3>
+
+                <h2>15,000+ روپے</h2>
+
+                <p>
+                    ڈیٹا بیس کام<br>
+                    آٹومیشن<br>
+                    کسٹم ٹولز<br>
+                    بزنس سلوشنز
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- International -->
+
+    <div class="region-title">
+
+        <span class="region-icon">
+
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="32" r="24"></circle>
+                <path d="M8 32h48"></path>
+                <path d="M32 8c8 7 12 15 12 24s-4 17-12 24"></path>
+                <path d="M32 8c-8 7-12 15-12 24s4 17 12 24"></path>
+                <path d="M13 20h38"></path>
+                <path d="M13 44h38"></path>
+            </svg>
+
+        </span>
+
+        <span class="en">
+            International Clients
+        </span>
+
+        <span class="ur" dir="rtl">
+            بین الاقوامی کلائنٹس
+        </span>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="en">
 
                 <h3>Basic</h3>
 
-                <div class="price">$25</div>
+                <h2>$25</h2>
 
-                <p>1 SQL/Data Report</p>
-                <p>Basic data cleanup</p>
-                <p>Fast delivery</p>
-
-                <a href="#contact" class="btn primary">
-                    Get Started
-                </a>
+                <p>
+                    One Business Report
+                </p>
 
             </div>
 
 
-            <div class="price-card featured">
+            <div class="ur" dir="rtl">
 
-                <div class="popular">
-                    MOST POPULAR
-                </div>
+                <h3>بیسک</h3>
 
-                <h3>Standard</h3>
+                <h2>$25</h2>
 
-                <div class="price">$35</div>
+                <p>
+                    ایک بزنس رپورٹ
+                </p>
 
-                <p>2–3 Reports</p>
-                <p>SQL Queries</p>
-                <p>Data Organization</p>
+            </div>
 
-                <a href="#contact" class="btn primary">
-                    Get Started
-                </a>
+        </div>
+
+
+        <div class="card">
+
+            <div class="en">
+
+                <h3>Business</h3>
+
+                <h2>$75</h2>
+
+                <p>
+                    Multiple Business Reports
+                </p>
 
             </div>
 
 
-            <div class="price-card">
+            <div class="ur" dir="rtl">
+
+                <h3>بزنس</h3>
+
+                <h2>$75</h2>
+
+                <p>
+                    متعدد بزنس رپورٹس
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="en">
 
                 <h3>Custom</h3>
 
-                <div class="price">$50+</div>
+                <h2>$150+</h2>
 
-                <p>Multiple Reports</p>
-                <p>Custom Requirements</p>
-                <p>Business Data Solutions</p>
+                <p>
+                    Custom Data Solution
+                </p>
 
-                <a href="#contact" class="btn primary">
-                    Contact Me
-                </a>
+            </div>
+
+
+            <div class="ur" dir="rtl">
+
+                <h3>کسٹم</h3>
+
+                <h2>$150+</h2>
+
+                <p>
+                    کسٹم ڈیٹا سلوشن
+                </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
+<!-- ================= WHY ================= -->
 
-        <h2>Let's Work Together</h2>
-    
-        <p>
-            Have Excel, SQL or business data that needs attention?
-            Send me the details and I'll suggest the best solution.
-        </p>
-    
-        <div class="contact-buttons">
-    
-            <a href="https://wa.me/923099101961"
-               class="btn primary"
-               target="_blank">
-                WhatsApp Me
-            </a>
-    
-            <a href="mailto:mohsinmosi322@gmail.com"
-               class="btn secondary">
-                Send Email
-            </a>
-    
+<section class="section">
+
+    <h2 class="en">
+        Why MA Catalyst?
+    </h2>
+
+    <h2 class="ur" dir="rtl">
+        MA Catalyst کیوں؟
+    </h2>
+
+
+    <div class="why-list">
+
+        <div class="why-item">
+            <span class="check-icon">✓</span>
+
+            <span class="en">
+                Pharmacy industry understanding
+            </span>
+
+            <span class="ur" dir="rtl">
+                فارمیسی بزنس کی سمجھ
+            </span>
         </div>
-    
-    </section>
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            © 2026 MA Catalyst
-        </p>
-
-    </footer>
 
 
-    <script src="script.js"></script>
+        <div class="why-item">
+            <span class="check-icon">✓</span>
+
+            <span class="en">
+                SQL &amp; database expertise
+            </span>
+
+            <span class="ur" dir="rtl">
+                SQL اور ڈیٹا بیس کی مہارت
+            </span>
+        </div>
+
+
+        <div class="why-item">
+            <span class="check-icon">✓</span>
+
+            <span class="en">
+                Affordable solutions
+            </span>
+
+            <span class="ur" dir="rtl">
+                مناسب قیمت
+            </span>
+        </div>
+
+
+        <div class="why-item">
+            <span class="check-icon">✓</span>
+
+            <span class="en">
+                Free demo before payment
+            </span>
+
+            <span class="ur" dir="rtl">
+                ادائیگی سے پہلے مفت ڈیمو
+            </span>
+        </div>
+
+
+        <div class="why-item">
+            <span class="check-icon">✓</span>
+
+            <span class="en">
+                Practical business-focused reports
+            </span>
+
+            <span class="ur" dir="rtl">
+                بزنس کی ضرورت کے مطابق رپورٹس
+            </span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+    <div class="contact-icon">
+
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="8" y="14" width="48" height="36" rx="5"></rect>
+            <polyline points="10,18 32,36 54,18"></polyline>
+        </svg>
+
+    </div>
+
+
+    <h2 class="en">
+        Let's Work Together
+    </h2>
+
+    <h2 class="ur" dir="rtl">
+        آئیں مل کر کام کریں
+    </h2>
+
+
+    <p class="en">
+        Send a small data sample and get a free initial analysis.
+    </p>
+
+    <p class="ur" dir="rtl">
+        اپنے ڈیٹا کا چھوٹا نمونہ بھیجیں اور مفت ابتدائی تجزیہ حاصل کریں۔
+    </p>
+
+
+    <!-- Replace YOUR_WHATSAPP_NUMBER and YOUR_EMAIL -->
+
+    <a href="https://wa.me/923099101961"
+       class="btn contact-btn"
+       target="_blank"
+       rel="noopener">
+        WhatsApp
+    </a>
+
+
+    <a href="mailto:mohsinmosi322@gmail.com"
+       class="btn contact-btn">
+        Email
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 MA Catalyst
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
