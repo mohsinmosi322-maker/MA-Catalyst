@@ -171,4 +171,29 @@ for (var s = 0; s < scrollLinks.length; s++) {
     });
 
 }
+  
+$(document).ready(function () {
+
+    $('a[href^="#"]').on('click', function (e) {
+
+        var target = $(this).attr('href');
+
+        if (target === '#') return;
+
+        var element = $(target);
+
+        if (!element.length) return;
+
+        e.preventDefault();
+
+        $('.nav-links').removeClass('mobile-open');
+
+        $('html, body').animate({
+            scrollTop: element.offset().top - 80
+        }, 800);
+
+    });
+
+});
+
 });
