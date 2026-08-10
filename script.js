@@ -123,5 +123,52 @@ function setLanguage(urduMode) {
         });
 
     }
+    /* ================= SMOOTH SCROLL ================= */
 
+var scrollLinks = document.querySelectorAll('a[href^="#"]');
+
+for (var s = 0; s < scrollLinks.length; s++) {
+
+    scrollLinks[s].addEventListener("click", function (event) {
+
+        var targetId = this.getAttribute("href");
+
+        if (!targetId || targetId === "#") {
+            return;
+        }
+
+        var target = document.querySelector(targetId);
+
+        if (!target) {
+            return;
+        }
+
+        event.preventDefault();
+
+        /* Close mobile menu first */
+        if (navLinks) {
+            navLinks.classList.remove("mobile-open");
+        }
+
+        /* Smooth scroll */
+        var header = document.querySelector(".navbar");
+
+        var headerHeight = header
+            ? header.offsetHeight
+            : 0;
+
+        var targetPosition =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            headerHeight -
+            10;
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth"
+        });
+
+    });
+
+}
 });
