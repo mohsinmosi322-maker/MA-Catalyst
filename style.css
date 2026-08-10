@@ -922,3 +922,37 @@ html[lang="en"] .ur {
     }
 
 }
+/* =========================================
+   SMOOTH PAGE SCROLL
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Better position when scrolling to sections */
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================================
+   GET FREE DEMO BUTTON ANIMATION
+   ========================================= */
+
+.btn {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(0) scale(0.97);
+}
