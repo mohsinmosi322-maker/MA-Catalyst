@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ================= LANGUAGE TOGGLE ================= */
+    /* ================= LANGUAGE ================= */
 
     var languageBtn = document.getElementById("languageBtn");
     var isUrdu = false;
@@ -14,14 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (isUrdu) {
 
-            /* English hide */
+            /* Hide English */
             for (var i = 0; i < englishItems.length; i++) {
                 englishItems[i].style.display = "none";
             }
 
-            /* Urdu show */
+            /* IMPORTANT:
+               CSS has .ur { display:none }
+               so Urdu MUST be explicitly shown.
+            */
             for (var j = 0; j < urduItems.length; j++) {
-                urduItems[j].style.display = "";
+                urduItems[j].style.display = "block";
             }
 
             document.documentElement.lang = "ur";
@@ -32,12 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } else {
 
-            /* English show */
+            /* Show English */
             for (var i = 0; i < englishItems.length; i++) {
-                englishItems[i].style.display = "";
+                englishItems[i].style.display = "block";
             }
 
-            /* Urdu hide */
+            /* Hide Urdu */
             for (var j = 0; j < urduItems.length; j++) {
                 urduItems[j].style.display = "none";
             }
@@ -49,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+
 
     if (languageBtn) {
 
@@ -63,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+
     /* Default English */
     setLanguage(false);
 
@@ -73,9 +78,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var menuToggle = document.getElementById("menuToggle");
     var navLinks = document.getElementById("navLinks");
 
+
     if (menuToggle && navLinks) {
 
-        /* Hamburger open / close */
+        /* Hamburger button */
 
         menuToggle.addEventListener("click", function (event) {
 
@@ -87,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        /* ================= MENU ITEMS ================= */
+        /* All menu links */
 
         var navItems = navLinks.querySelectorAll("a");
 
@@ -95,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             navItems[k].addEventListener("click", function () {
 
-                /* Immediately close hamburger */
+                /* Auto hide menu */
                 navLinks.classList.remove("mobile-open");
 
             });
@@ -103,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        /* ================= OUTSIDE CLICK ================= */
+        /* Click outside = close */
 
         document.addEventListener("click", function (event) {
 
@@ -119,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        /* ================= ESC KEY ================= */
+        /* ESC = close */
 
         document.addEventListener("keydown", function (event) {
 
@@ -132,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        /* ================= DESKTOP ================= */
+        /* Desktop = close mobile menu */
 
         window.addEventListener("resize", function () {
 
