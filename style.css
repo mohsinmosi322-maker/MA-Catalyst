@@ -17,11 +17,17 @@ body {
 
 
 /* ================= LANGUAGE ================= */
-
 .ur {
     display: none;
 }
 
+html[lang="ur"] .ur {
+    display: block;
+}
+
+html[lang="ur"] .en {
+    display: none;
+}
 
 /* ================= HEADER ================= */
 
