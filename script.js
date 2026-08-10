@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var languageBtn = document.getElementById("languageBtn");
     var isUrdu = false;
 
-   function setLanguage(urduMode) {
+function setLanguage(urduMode) {
 
     isUrdu = urduMode;
 
@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 }
-
     if (languageBtn) {
 
         languageBtn.addEventListener("click", function (event) {
